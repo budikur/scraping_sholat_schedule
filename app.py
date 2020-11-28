@@ -4,9 +4,9 @@ import bs4
 url = 'https://jadwalsholat.pkpu.or.id/?id=135'
 content = requests.get(url)
 #print(content.text)
-asd = bs4.BeautifulSoup(content.text,"html.parser")
+soup = bs4.BeautifulSoup(content.text, "html.parser")
 #print(asd)
-hari_ini = asd.find('tr','table_highlight')
+hari_ini = soup.find('tr', 'table_highlight')
 #print(hari_ini)
 sholat = {}
 i = 0
